@@ -92,7 +92,7 @@
 
 
   $(function () {
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 20; i++) {
       var d = (data[i] = {});
       d.server = "Node " + i;
       for (var j = 0; j < columns.length; j++) {
@@ -108,25 +108,20 @@
 
   function simulateRealTimeUpdates() {
     var changes = {};
-    var numberOfUpdates = Math.round(Math.random() * (data.length / 10));
-    for (var i = 0; i < numberOfUpdates; i++) {
-      var server = Math.round(Math.random() * (data.length - 1));
-      var cpu = Math.round(Math.random() * (columns.length - 1));
-      var delta = Math.round(Math.random() * 50) - 25;
-      var col = grid.getColumnIndex("cpu" + cpu);
-      var val = data[server][col] + delta;
-      val = Math.max(0, val);
-      val = Math.min(100, val);
+    var left = randomIntFromInterval(0,7);
+    var right = randomIntFromInterval(8,20);
+    for (var i = left; i < right; i++) {
+      var node = i;
+      var col = 0;
 
-      data[server][col] = val;
+      data[node][col] = data[node][col]+1;
 
-      if (!changes[server]) {
-        changes[server] = {};
+      if (!changes[node]) {
+        changes[node] = {};
       }
 
-      changes[server]["cpu" + cpu] = "changed";
-
-      grid.invalidateRow(server);
+      changes[node]["header"] = "changed";
+      grid.invalidateRow(node);
     }
 
     grid.setCellCssStyles("highlight", changes);
@@ -138,6 +133,10 @@
   function findCurrentServer() {
     grid.scrollRowIntoView(currentServer);
     grid.flashCell(currentServer, grid.getColumnIndex("server"), 100);
+  }
+
+  function randomIntFromInterval(min,max) {
+    return Math.floor(Math.random()*(max-min+1)+min);
   }
 </script>
 </body>
