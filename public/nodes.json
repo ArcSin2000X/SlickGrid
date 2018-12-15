@@ -287,7 +287,7 @@
     "WalletName": "Wallet-IEA",
     "WalletMnemonic": "flame window trust dragon leave top under install strong project casual open",
     "WalletPassword": "node",
-	"ConnectedNodes": ["NodeIB","NodeIC","NodeID"]
+	"ConnectedNodes": ["NodeIB","NodeIC","NodeID",]
   },
   {
     "NodeImplementation": 1,
