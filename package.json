@@ -1,0 +1,27 @@
+{
+  "name": "coherance",
+  "version": "1.0.0",
+  "description": "JS front end for Network Viewer",
+  "main": "server.js",
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArcSin2000X/SlickGrid.git"
+  },
+  "author": "Lukasz Krol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArcSin2000X/SlickGrid/issues"
+  },
+  "homepage": "https://github.com/ArcSin2000X/SlickGrid#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

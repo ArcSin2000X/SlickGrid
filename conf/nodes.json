@@ -1,0 +1,372 @@
+[
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeAA",
+	"NodeBranchName": "BranchAA",
+    "NodeAddress": "NodeAA:37221",
+    "WalletName": "Wallet-AAA",
+    "WalletMnemonic": "render share trim sea scrub version assume lunch border dance rib invest",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAB","NodeBA","NodeCA","NodeGA","NodeGB","NodeGC","NodeGD"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeAB",
+	"NodeBranchName": "BranchAB",
+    "NodeAddress": "NodeAB:37221",
+    "WalletName": "Wallet-ABA",
+    "WalletMnemonic": "brick expose stable afraid approve shine aisle session knock rebuild term sadness",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAA","NodeAC","NodeDB","NodeGA","NodeGB","NodeGC","NodeGD","NodeGE","NodeHA","NodeHEG","NodeHC"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeAC",
+	"NodeBranchName": "BranchAC",
+    "NodeAddress": "NodeAC:37221",
+    "WalletName": "Wallet-ACA",
+    "WalletMnemonic": "define arrive bench order acid loud cook law lend only exit torch",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAB", "NodeAD", "NodeEA","NodeIA","NodeIB","NodeIC","NodeID"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeAD",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeAD:37221",
+    "WalletName": "Wallet-ADA",
+    "WalletMnemonic": "eternal ahead unlock crystal seminar horse expand fossil first anchor dream view",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAC","NodeCB","NodeFA","NodeJA","NodeJD"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeBA",
+	"NodeBranchName": "BranchAA",
+    "NodeAddress": "NodeBA:37221",
+    "WalletName": "Wallet-BAA",
+    "WalletMnemonic": "arena fitness spirit design model doll drum brown grid wise unlock foster",
+    "WalletPassword": "node",
+	"ConnectedNodes": []
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeCA",
+	"NodeBranchName": "BranchAA",
+    "NodeAddress": "NodeCA:37221",
+    "WalletName": "Wallet-CAA",
+    "WalletMnemonic": "slight gravity program female apple happy unfold galaxy satisfy vehicle more cycle",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAA"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeCB",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeCB:37221",
+    "WalletName": "Wallet-CBA",
+    "WalletMnemonic": "duty nurse spin garlic chimney tunnel denial draft rich link protect zebra",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAD"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeDA",
+	"NodeBranchName": "BranchAB",
+    "NodeAddress": "NodeDA:37221",
+    "WalletName": "Wallet-DAA",
+    "WalletMnemonic": "rely crucial leader gadget miracle curve theme champion tortoise theme tiger word",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeDB"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeDB",
+	"NodeBranchName": "BranchAB",
+    "NodeAddress": "NodeDB:37221",
+    "WalletName": "Wallet-DBA",
+    "WalletMnemonic": "venue market forest replace moment side sell nominee pretty choose vocal young",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeDA", "NodeAB"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeEA",
+	"NodeBranchName": "BranchAC",
+    "NodeAddress": "NodeEA:37221",
+    "WalletName": "Wallet-EAA",
+    "WalletMnemonic": "adjust step kind head save profit push joy question upon proof police",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAC"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeFA",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeFA:37221",
+    "WalletName": "Wallet-FAA",
+    "WalletMnemonic": "honey patch blouse rug car work test any fortune kiwi trade hobby",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAD","NodeFB","NodeFC","NodeFD"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeFB",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeFB:37221",
+    "WalletName": "Wallet-FBA",
+    "WalletMnemonic": "stage maze topic radio return metal tell profit edit corn arm diary",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeFA"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeFC",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeFC:37221",
+    "WalletName": "Wallet-FCA",
+    "WalletMnemonic": "baby exile blame focus fiction smooth visa whip chimney enact amount pond",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeFA"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeFD",
+	"NodeBranchName": "BranchAA",
+    "NodeAddress": "NodeFD:37221",
+    "WalletName": "Wallet-FDA",
+    "WalletMnemonic": "split phone produce found judge armor tornado adult security stairs tourist script",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeFA"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeGA",
+	"NodeBranchName": "BranchAA",
+    "NodeAddress": "NodeGA:37221",
+    "WalletName": "Wallet-GAA",
+    "WalletMnemonic": "once wood keep mean oak suggest great alter differ tumble kit drop",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAA","NodeAB","NodeGD","NodeGE"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeGB",
+	"NodeBranchName": "BranchAA",
+    "NodeAddress": "NodeGB:37221",
+    "WalletName": "Wallet-GBA",
+    "WalletMnemonic": "explain monster mix drip acquire two senior riot shy raw canal table",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAA","NodeAB","NodeGE"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeGC",
+	"NodeBranchName": "BranchAA",
+    "NodeAddress": "NodeGC:37221",
+    "WalletName": "Wallet-GCA",
+    "WalletMnemonic": "health attract property still funny later whip mass aerobic tank glad salute",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAA","NodeAB","NodeGE"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeGD",
+	"NodeBranchName": "BranchAA",
+    "NodeAddress": "NodeGD:37221",
+    "WalletName": "Wallet-GDA",
+    "WalletMnemonic": "riot game fire exist verb clutch swim kidney ill distance utility high",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAA","NodeAB","NodeGA","NodeGE"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeGE",
+	"NodeBranchName": "BranchAA",
+    "NodeAddress": "NodeGE:37221",
+    "WalletName": "Wallet-GEA",
+    "WalletMnemonic": "wave glass song present memory amount smoke obey mansion joy icon battle",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeGA","NodeGB","NodeGC","NodeGD","NodeAB"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeHA",
+	"NodeBranchName": "BranchAB",
+    "NodeAddress": "NodeHA:37221",
+    "WalletName": "Wallet-HAA",
+    "WalletMnemonic": "youth breeze lab wide jar scene nephew mule open ladder cream define",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAB","NodeHBX"]
+  },
+  {
+    "NodeImplementation": 0,
+    "NodeName": "NodeHBX",
+	"NodeBranchName": "BranchAB",
+    "NodeAddress": "NodeHBX:16174",
+    "WalletName": "Wallet-HBA",
+    "WalletMnemonic": "neutral course control razor help blood grain devote father naive job grocery",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeHA","NodeHEG"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeHC",
+	"NodeBranchName": "BranchAB",
+    "NodeAddress": "NodeHC:37221",
+    "WalletName": "Wallet-HCA",
+    "WalletMnemonic": "anger scene cinnamon design grape humor adjust world seed appear frame message",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAB","NodeHDX"]
+  },
+  {
+    "NodeImplementation": 0,
+    "NodeName": "NodeHDX",
+	"NodeBranchName": "BranchAB",
+    "NodeAddress": "NodeHDX:16174",
+    "WalletName": "Wallet-HDA",
+    "WalletMnemonic": "general ramp ramp transfer wheat page matter unit fiction rocket copper hunt",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeHC","NodeHEG"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeHEG",
+	"NodeBranchName": "BranchAB",
+    "NodeAddress": "NodeHEG:37221",
+    "WalletName": "Wallet-HEG",
+    "WalletMnemonic": "???",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAB","NodeHBX","NodeHDX"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeIA",
+	"NodeBranchName": "BranchAC",
+    "NodeAddress": "NodeIA:37221",
+    "WalletName": "Wallet-IAA",
+    "WalletMnemonic": "nerve panic cabbage glide main wise castle universe oblige midnight giggle deliver",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAC","NodeIB"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeIB",
+	"NodeBranchName": "BranchAC",
+    "NodeAddress": "NodeIB:37221",
+    "WalletName": "Wallet-IBA",
+    "WalletMnemonic": "lady faith dish indicate win always office lyrics trend virus audit thought",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAC","NodeIE","NodeIA"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeIC",
+	"NodeBranchName": "BranchAC",
+    "NodeAddress": "NodeIC:37221",
+    "WalletName": "Wallet-ICA",
+    "WalletMnemonic": "veteran reward lend shed huge again phrase budget universe next tired scrub",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAC","NodeIE"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeID",
+	"NodeBranchName": "BranchAC",
+    "NodeAddress": "NodeID:37221",
+    "WalletName": "Wallet-IDA",
+    "WalletMnemonic": "swarm report tourist depth remain access path burger report patch drink lesson",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAC","NodeIE"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeIE",
+	"NodeBranchName": "BranchAC",
+    "NodeAddress": "NodeIE:37221",
+    "WalletName": "Wallet-IEA",
+    "WalletMnemonic": "flame window trust dragon leave top under install strong project casual open",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeIB","NodeIC","NodeID",]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeJA",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeJA:37221",
+    "WalletName": "Wallet-JAA",
+    "WalletMnemonic": "struggle image hub release erosion ahead rhythm laugh doll stick puppy gravity",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAD", "NodeJBG", "NodeJCX"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeJBG",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeJBG:37221",
+    "WalletName": "Wallet-JBA",
+    "WalletMnemonic": "absurd rent half clap later wheat brother team tonight license wage beef",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeJA","NodeJCX"]
+  },
+  {
+    "NodeImplementation": 0,
+    "NodeName": "NodeJCX",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeJCX:16174",
+    "WalletName": "Wallet-JCA",
+    "WalletMnemonic": "hidden quantum ready stuff twenty ecology roast purchase frame visual effort daring",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeJA", "NodeJBG"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeJD",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeJD:37221",
+    "WalletName": "Wallet-JDA",
+    "WalletMnemonic": "giraffe undo oven age hill fringe share game filter manage inner clerk",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeAD","NodeJEG","NodeJGX"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeJEG",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeJEG:37221",
+    "WalletName": "Wallet-JEA",
+    "WalletMnemonic": "credit balance winner item dance wife air solve soon slight song hungry",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeJD","NodeJFX"]
+  },
+  {
+    "NodeImplementation": 0,
+    "NodeName": "NodeJFX",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeJFX:16174",
+    "WalletName": "Wallet-JFA",
+    "WalletMnemonic": "elite gain smooth avoid boil genre series right ketchup mutual pigeon depend",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeJEG", "NodeJGX"]
+  },
+  {
+    "NodeImplementation": 0,
+    "NodeName": "NodeJGX",
+	"NodeBranchName": "BranchAD",
+    "NodeAddress": "NodeJGX:16174",
+    "WalletName": "Wallet-JGA",
+    "WalletMnemonic": "??",
+    "WalletPassword": "node",
+	"ConnectedNodes": ["NodeJD", "NodeJFX"]
+  },
+  {
+    "NodeImplementation": 1,
+    "NodeName": "NodeXA",
+	"NodeBranchName": "BranchX",
+    "NodeAddress": "NodeXA:37221",
+    "WalletName": "Wallet-XA",
+    "WalletMnemonic": "rely crucial leader gadget miracle curve theme champion tortoise theme tiger word",
+    "WalletPassword": "node",
+	"ConnectedNodes": []
+  }
+]
