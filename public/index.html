@@ -5,7 +5,7 @@
   <title>SlickGrid Dashboard for Stratis</title>
   <link rel="stylesheet" href="slick.grid.css" type="text/css"/>
   <link rel="stylesheet" href="jquery-ui-1.8.16.custom.css" type="text/css"/>
-  <link rel="stylesheet" href="examples.css" type="text/css"/>
+  <!-- <link rel="stylesheet" href="examples.css" type="text/css"/> -->
   <style>
     .load-medium {
       color: orange;
@@ -51,6 +51,7 @@
 <script src="jquery-ui-1.8.16.custom.min.js"></script>
 <script src="jquery.event.drag-2.2.js"></script>
 <script src="slick.core.js"></script>
+<script src="slick.dataview.js"></script>
 <script src="slick.cellselectionmodel.js"></script>
 <script src="slick.rowmovemanager.js"></script>
 <script src="slick.grid.js"></script>
@@ -59,14 +60,26 @@
   Pusher.logToConsole = true;
   var grid;
   var data = [];
+  var nodeConfigResponse;
+  var dataView = new Slick.Data.DataView();
+      dataView.onRowCountChanged.subscribe(function (e, args) {
+        grid.updateRowCount();
+        grid.render();
+      });
+      dataView.onRowsChanged.subscribe(function (e, args) {
+        grid.invalidateRows(args.rows);
+        grid.setCellCssStyles("highlight", changes);
+        grid.render();
+      });
   var columns = [
-    {id: "server", name: "Server", field: "server", width: 180},
-    {id: "header", name: "Header", field: 0, width: 80, formatter: dashboardFormatter},
-    {id: "consensus", name: "Consensus", field: 1, width: 80, formatter: dashboardFormatter},
-    {id: "blockstore", name: "Blockstore", field: 2, width: 80, formatter: dashboardFormatter},
-    {id: "wallet", name: "Wallet", field: 3, width: 80, formatter: dashboardFormatter}
+    {id: "server", name: "ID", field: "id", width: 180},
+    {id: "header", name: "Header", field: "header", width: 80, formatter: dashboardFormatter},
+    {id: "consensus", name: "Consensus", field: "consensus", width: 80, formatter: dashboardFormatter},
+    {id: "blockstore", name: "Blockstore", field: "blockstore", width: 80, formatter: dashboardFormatter},
+    {id: "wallet", name: "Wallet", field: "wallet", width: 80, formatter: dashboardFormatter}
   ];
   var currentServer;
+  var changes = {};
   var options = {
     editable: false,
     enableAddRow: false,
@@ -78,13 +91,12 @@
       cluster: 'eu',
       forceTLS: true
     });
-  
-  renderMainGrid(onResponseSuccess);
+  var channelHeader = pusher.subscribe('channel-header');
+      channelHeader.bind('update', data => updateNodeStats(data, 'header'));
+  var channelConsensus = pusher.subscribe('channel-consensus');
+      channelConsensus.bind('update', data => updateNodeStats(data, 'consensus'));
 
-  var channel = pusher.subscribe('my-channel');
-  channel.bind('my-event', function(data) {
-    simulateRealTimeUpdates();
-  });
+  renderMainGrid(onResponseSuccess);
   
   function renderMainGrid(callback)
   {
@@ -97,34 +109,24 @@
 
   function onResponseSuccess(response)
   {
-    var nodeConfigResponse = JSON.parse(response);
-    var firstNide = nodeConfigResponse[0].NodeName;
+    nodeConfigResponse = JSON.parse(response);
     var countOfNodes = nodeConfigResponse.length;
 
     $(function () {
       for (var i = 0; i < countOfNodes; i++) {
-        var d = (data[i] = {});
-        d.server = nodeConfigResponse[i].NodeName;
-        for (var j = 0; j < columns.length; j++) {
-          // d[j] = Math.round(Math.random() * 100);
-          d[j] = Math.round(Math.random() * 100);
-        }
+        data.push({
+          'id': nodeConfigResponse[i].NodeName, 
+          'header': 0, 
+          'consensus': 0,
+          'blockstore': 0,
+          'wallet': 0});
       }
 
-      grid = new Slick.Grid("#myGrid", data, columns, options);
+      grid = new Slick.Grid("#myGrid", dataView, columns, options);
 
-      currentServer = Math.round(Math.random() * (data.length - 1));
+      dataView.setItems(data);
     });
-
   }
-
-  // function enablePusherSub(channelName,callback)
-  // {
-  //   var channel = pusher.subscribe('my-channel');
-  //   channel.bind('my-event', function(data) {
-  //     alert(JSON.stringify(data));
-  //   });
-  // }
 
   function dashboardFormatter(row, cell, value, columnDef, dataContext) {
     if (value == 0) {
@@ -139,27 +141,37 @@
   }
 
   function simulateRealTimeUpdates() {
-    var changes = {};
-    var left = randomIntFromInterval(0,7);
-    var right = randomIntFromInterval(8,20);
-    for (var i = left; i < right; i++) {
-      var node = i;
-      var col = 0;
+    changes = {};
+    var item = dataView.getItemById('NodeAB');
+    var node = data.findIndex(x => x.id=='NodeAB');
+    console.log(node);
+    item['header'] = item['header'] + 1;
 
-      data[node][col] = data[node][col]+1;
-
-      if (!changes[node]) {
+    if (!changes[node]) {
         changes[node] = {};
       }
 
-      changes[node]["header"] = "changed";
-      grid.invalidateRow(node);
+     changes[node]["header"] = "changed";
+
+    dataView.updateItem('NodeAB', item);
+  }
+
+  function updateCell(nodeName, column, newValue) {
+    changes = {};
+    var item = dataView.getItemById(nodeName);
+    var node = data.findIndex(x => x.id==nodeName);
+    item[column] = newValue;
+
+    if (!changes[node]) {
+        changes[node] = {};
     }
 
-    grid.setCellCssStyles("highlight", changes);
-    grid.render();
+    changes[node][column] = "changed";
+    dataView.updateItem(nodeName, item);
+  }
 
-    //setTimeout(simulateRealTimeUpdates, 500);
+  function updateNodeStats(statData, field) {
+    updateCell(statData.NodeName, field, statData.Value);
   }
 
   function findCurrentServer() {

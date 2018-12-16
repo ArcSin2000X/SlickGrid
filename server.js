@@ -17,8 +17,27 @@ var pusher = new Pusher({
 //     "message": "hello world"
 //   });
 
+var sampleUpdate1 = { NodeName: "NodeAA", Value: 20};
+var sampleUpdate2 = { NodeName: "NodeDA", Value: 10};
+var sampleUpdate3 = { NodeName: "NodeAB", Value: 21};
+var sampleUpdate4 = { NodeName: "NodeAC", Value: 288};
+var sampleUpdate5 = { NodeName: "NodeAD", Value: 20};
+var sampleUpdate6 = { NodeName: "NodeDB", Value: 20};
+var sampleUpdate7 = { NodeName: "NodeDA", Value: 20};
+
 app.get('/getNodeConfig', (req, res) => res.send(nodeConf));
-app.get('/pusherTest', (req, res) => pusher.trigger('my-channel', 'my-event', {"message": "hello world"}));
+app.get('/pusherTest', (req, res) => {
+  pusher.trigger('channel-header', 'update', sampleUpdate1);
+  pusher.trigger('channel-header', 'update', sampleUpdate2);
+  pusher.trigger('channel-consensus', 'update', sampleUpdate3);
+  pusher.trigger('channel-header', 'update', sampleUpdate4);
+  pusher.trigger('channel-consensus', 'update', sampleUpdate5);
+  pusher.trigger('channel-header', 'update', sampleUpdate6);
+  pusher.trigger('channel-header', 'update', sampleUpdate7);
+  // pusher.trigger('channel-header', 'update', {"NodeName": "NodeaAD", "Value": "24"})
+  // pusher.trigger('channel-header', 'update', {"NodeName": "NodeaAC", "Value": "31"})
+  res.send({success:true});
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 module.exports = app;
