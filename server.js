@@ -8,14 +8,10 @@ const port = 3000
 var pusher = new Pusher({
     appId: '673272',
     key: '0c62f8cf96ca6bdab529',
-    secret: 'b457e31486d1078f5268',
+    secret: 'secret',
     cluster: 'eu',
     encrypted: true
   });
-
-// pusher.trigger('my-channel', 'my-event', {
-//     "message": "hello world"
-//   });
 
 var sampleUpdate1 = { NodeName: "NodeAA", Value: 20};
 var sampleUpdate2 = { NodeName: "NodeDA", Value: 10};
@@ -28,14 +24,12 @@ var sampleUpdate7 = { NodeName: "NodeDA", Value: 20};
 app.get('/getNodeConfig', (req, res) => res.send(nodeConf));
 app.get('/pusherTest', (req, res) => {
   pusher.trigger('channel-header', 'update', sampleUpdate1);
-  pusher.trigger('channel-header', 'update', sampleUpdate2);
+  pusher.trigger('channel-wallet', 'update', sampleUpdate2);
   pusher.trigger('channel-consensus', 'update', sampleUpdate3);
   pusher.trigger('channel-header', 'update', sampleUpdate4);
   pusher.trigger('channel-consensus', 'update', sampleUpdate5);
-  pusher.trigger('channel-header', 'update', sampleUpdate6);
+  pusher.trigger('channel-blockstore', 'update', sampleUpdate6);
   pusher.trigger('channel-header', 'update', sampleUpdate7);
-  // pusher.trigger('channel-header', 'update', {"NodeName": "NodeaAD", "Value": "24"})
-  // pusher.trigger('channel-header', 'update', {"NodeName": "NodeaAC", "Value": "31"})
   res.send({success:true});
 });
 
