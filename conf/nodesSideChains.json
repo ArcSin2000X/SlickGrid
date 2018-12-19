@@ -1,0 +1,362 @@
+[
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMAA",
+		"NodeBranchName": "GatewayMain",
+		"NodeAddress": "NodeMAA:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMAB", "NodeMAC", "NodeMAD", "NodeMAE", "NodeMAF", "NodeMAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMAB",
+		"NodeBranchName": "GatewayMain",
+		"NodeAddress": "NodeMAB:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMAC", "NodeMAD", "NodeMAE", "NodeMAF", "NodeMAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMAC",
+		"NodeBranchName": "GatewayMain",
+		"NodeAddress": "NodeMAC:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMAD", "NodeMAE", "NodeMAF", "NodeMAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMAD",
+		"NodeBranchName": "GatewayMain",
+		"NodeAddress": "NodeMAD:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMAE", "NodeMAF", "NodeMAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMAE",
+		"NodeBranchName": "GatewayMain",
+		"NodeAddress": "NodeMAE:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMAF", "NodeMAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMAF",
+		"NodeBranchName": "GatewayMain",
+		"NodeAddress": "NodeMAF:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMAG",
+		"NodeBranchName": "GatewayMain",
+		"NodeAddress": "NodeMAG:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMCD"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMBA",
+		"NodeBranchName": "Mainnet",
+		"NodeAddress": "NodeMBA:37221",
+		"WalletName": "Wallet-MBAA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMAA"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMBB",
+		"NodeBranchName": "Mainnet",
+		"NodeAddress": "NodeMBB:37221",
+		"WalletName": "Wallet-MBBA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMBA"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMDA",
+		"NodeBranchName": "Mainnet",
+		"NodeAddress": "NodeMDA:37221",
+		"WalletName": "Wallet-MDAA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMAA", "NodeMAB", "NodeMAC", "NodeMAD"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMDB",
+		"NodeBranchName": "Mainnet",
+		"NodeAddress": "NodeMDB:37221",
+		"WalletName": "Wallet-MDBA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMDA", "NodeMAE", "NodeMAF", "NodeMAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMCA",
+		"NodeBranchName": "Mainnet",
+		"NodeAddress": "NodeMCA:37221",
+		"WalletName": "Wallet-MCAA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMCD"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMCB",
+		"NodeBranchName": "Mainnet",
+		"NodeAddress": "NodeMCB:37221",
+		"WalletName": "Wallet-MCBA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMCCX"]
+	},
+	{
+		"NodeImplementation": 0,
+		"NodeName": "NodeMCCX",
+		"NodeBranchName": "Mainnet",
+		"NodeAddress": "NodeMCCX:16174",
+		"WalletName": "default",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": []
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeMCD",
+		"NodeBranchName": "Mainnet",
+		"NodeAddress": "NodeMCD:37221",
+		"WalletName": "Wallet-MCDA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeMCCX", "NodeMCB"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSAA",
+		"NodeBranchName": "FederationSide",
+		"NodeAddress": "NodeSAA:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAB", "NodeSAC", "NodeSAD", "NodeSAE", "NodeSAF", "NodeSAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSAB",
+		"NodeBranchName": "FederationSide",
+		"NodeAddress": "NodeSAB:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAC", "NodeSAD", "NodeSAE", "NodeSAF", "NodeSAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSAC",
+		"NodeBranchName": "FederationSide",
+		"NodeAddress": "NodeSAC:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAD", "NodeSAE", "NodeSAF", "NodeSAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSAD",
+		"NodeBranchName": "FederationSide",
+		"NodeAddress": "NodeSAD:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAE", "NodeSAF", "NodeSAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSAE",
+		"NodeBranchName": "FederationSide",
+		"NodeAddress": "NodeSAE:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAF", "NodeSAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSAF",
+		"NodeBranchName": "FederationSide",
+		"NodeAddress": "NodeSAF:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSAG",
+		"NodeBranchName": "FederationSide",
+		"NodeAddress": "NodeSAG:37221",
+		"WalletName": "",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": []
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSBA",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSBA:37221",
+		"WalletName": "Wallet-SBAA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAA", "NodeSAB"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSBB",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSBB:37221",
+		"WalletName": "Wallet-SBBA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAA", "NodeSAB"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSBC",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSBC:37221",
+		"WalletName": "Wallet-SBCA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAA", "NodeSAB"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSBD",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSBD:37221",
+		"WalletName": "Wallet-SBDA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAA", "NodeSAB"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSBE",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSBE:37221",
+		"WalletName": "Wallet-SBEA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSBA", "NodeSBB", "NodeSBC", "NodeSBD"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSCA",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSCA:37221",
+		"WalletName": "Wallet-SCAA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAC"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSCB",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSCB:37221",
+		"WalletName": "Wallet-SCBA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAD", "NodeSCA"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSCC",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSCC:37221",
+		"WalletName": "Wallet-SCCA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAE"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSCD",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSCD:37221",
+		"WalletName": "Wallet-SCDA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAF"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSCE",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSCE:37221",
+		"WalletName": "Wallet-SCEA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSCB", "NodeSCC", "NodeSCD", "NodeSAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSDA",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSDA:37221",
+		"WalletName": "Wallet-SDAA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAA", "NodeSAB", "NodeSAC", "NodeSAD", "NodeSAE", "NodeSAF", "NodeSAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSDB",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSDB:37221",
+		"WalletName": "Wallet-SDBA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSAA", "NodeSAB", "NodeSAC", "NodeSAD", "NodeSAE", "NodeSAF", "NodeSAG"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSDC",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSDC:37221",
+		"WalletName": "Wallet-SDCA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSDA", "NodeSDB"]
+	},
+	{
+		"NodeImplementation": 1,
+		"NodeName": "NodeSDD",
+		"NodeBranchName": "SideChain",
+		"NodeAddress": "NodeSDD:37221",
+		"WalletName": "Wallet-SDDA",
+		"WalletMnemonic": "WWWW",
+		"WalletPassword": "node",
+		"ConnectedNodes": ["NodeSDA", "NodeSDB"]
+	}
+]
