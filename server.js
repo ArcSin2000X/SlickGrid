@@ -32,15 +32,18 @@ app.get('/pusherTest', (req, res) => {
 });
 
 app.post('/setStatsData', (req, res)=> {
-    console.log("test");
-    // console.log(req.body.NodeName);
-    res.send({success:true});
+    try {
+      console.log(req.body);
+      pusher.trigger('channel-stats', 'update', req.body);
+      res.send({success:true});
+    }
+    catch(err)
+    {
+      console.log(err.message);
+      res.send({success:false});
+    } 
 });
 
 app.use(express.static(path.join(__dirname, 'public')));
 module.exports = app;
 app.listen(port, () => console.log(`Server started on Port: ${port}!`))
-
-// curl -d '{"NodeName":"NodeMAA"}' -H "Content-Type: application/json" http://localhost:3000/setStatsData
-
-// curl -H "Content-Type: application/json" -H "Accept: application/json" -d '{"username":"xyz","password":"xyz"}' http://localhost:3000/setStatsData
